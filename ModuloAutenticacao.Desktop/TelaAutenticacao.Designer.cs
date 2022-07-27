@@ -102,6 +102,7 @@
             this.Name = "TelaAutenticacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modulo de Autenticação";
+            this.Load += new System.EventHandler(this.TelaAutenticacao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

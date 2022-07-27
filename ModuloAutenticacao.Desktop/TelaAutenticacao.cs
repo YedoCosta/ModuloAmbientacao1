@@ -49,5 +49,10 @@ namespace ModuloAutenticacao.Desktop
         {
 
         }
+
+        private void TelaAutenticacao_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
