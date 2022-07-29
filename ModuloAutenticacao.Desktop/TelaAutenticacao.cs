@@ -29,19 +29,19 @@ namespace ModuloAutenticacao.Desktop
             user.Login = textLogin.Text;
             user.Senha = textSenha.Text;
 
+
             if (user.Login.Equals("") || user.Senha.Equals(""))
             {
                 MessageBox.Show("Login Obrigatorio");
                 textLogin.Focus();
             }
-            else if (user.Login != "senai" && user.Senha != "123")
+            else if (user.Login.Equals("senai") && user.Senha.Equals(123))
             {
                 MessageBox.Show("Usuario ou senha invalido");
                 textSenha.Focus();
             }
             else
             {
-                MessageBox.Show("Sucesso!");
                 TelaCadUsuario tcu = new TelaCadUsuario();
                 tcu.Show();
 
@@ -57,5 +57,11 @@ namespace ModuloAutenticacao.Desktop
         {
 
         }
+
+        private void textSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

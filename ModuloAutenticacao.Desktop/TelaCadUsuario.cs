@@ -69,7 +69,12 @@ namespace ModuloAutenticacao.Desktop
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            txtLogin.Text = txtNome.Text + txtSobreNome.Text;
+            //txtLogin.Text = txtNome.Text + txtSobreNome.Text;
+            txtLogin.Text = txtNome.Text;
+            txtLogin.BackColor = Color.White;
+            string[] nome = txtNome.Text.Split(' ');
+            string[] sobrenome = txtSobreNome.Text.Split(' ');
+            txtLogin.Text = nome[0].ToLower() +"."+ sobrenome[sobrenome.Length -1].ToLower() + "@aluno.senai.br";
         }
 
         private void txtLogin_TextChanged(object sender, EventArgs e)
@@ -77,5 +82,26 @@ namespace ModuloAutenticacao.Desktop
 
         }
 
-      
+        private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
+        {
+                   
+        }
+
+        private void txtConfirmarSenha_Leave(object sender, EventArgs e)
+        {
+            var senha = txtSenha.Text;
+            var confirmar = txtConfirmarSenha.Text;
+
+            if (confirmar.Equals(senha))
+            {
+                txtNivel.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Senhas incompativeis");
+                txtSenha.Clear();
+                txtConfirmarSenha.Clear();
+            }
+        }
+    }
 }

@@ -73,6 +73,8 @@
             this.textSenha.PasswordChar = '*';
             this.textSenha.Size = new System.Drawing.Size(137, 23);
             this.textSenha.TabIndex = 3;
+            this.textSenha.TextChanged += new System.EventHandler(this.textSenha_TextChanged);
+           
             // 
             // button1
             // 
