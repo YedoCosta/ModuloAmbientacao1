@@ -30,3 +30,4 @@ C:\Users\cleit\OneDrive\Desktop\Senai\moduloAmbientacao\ModuloAutenticacao.Deskt
 C:\Users\cleit\OneDrive\Desktop\Senai\moduloAmbientacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.csproj.CopyComplete
 C:\Users\cleit\OneDrive\Desktop\Senai\moduloAmbientacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.exe
 C:\Users\cleit\OneDrive\Desktop\Senai\moduloAmbientacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.pdb
+C:\Users\Aluno\Desktop\cleitson\ModuloAutenticacao\ModuloAutenticacao.Desktop\obj\Debug\ModuloAutenticacao.Desktop.TelaNivel.resources

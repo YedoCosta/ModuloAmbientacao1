@@ -66,6 +66,12 @@
     <Compile Include="TelaCadUsuario.Designer.cs">
       <DependentUpon>TelaCadUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaNivel.Designer.cs">
+      <DependentUpon>TelaNivel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +89,9 @@
     </Compile>
     <EmbeddedResource Include="TelaCadUsuario.resx">
       <DependentUpon>TelaCadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaNivel.resx">
+      <DependentUpon>TelaNivel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
