@@ -74,7 +74,7 @@ namespace ModuloAutenticacao.Desktop
             txtLogin.BackColor = Color.White;
             string[] nome = txtNome.Text.Split(' ');
             string[] sobrenome = txtSobreNome.Text.Split(' ');
-            txtLogin.Text = nome[0].ToLower() +"."+ sobrenome[sobrenome.Length -1].ToLower() + "@aluno.senai.br";
+            txtLogin.Text = nome[0].ToLower() +"."+ sobrenome[sobrenome.Length -1].ToLower();
         }
 
         private void txtLogin_TextChanged(object sender, EventArgs e)
@@ -94,13 +94,14 @@ namespace ModuloAutenticacao.Desktop
 
             if (confirmar.Equals(senha))
             {
-                txtNivel.Focus();
+                txtSenha.Focus();
             }
             else
             {
                 MessageBox.Show("Senhas incompativeis");
                 txtSenha.Clear();
                 txtConfirmarSenha.Clear();
+                txtSenha.Focus();
             }
         }
     }
