@@ -1,6 +1,6 @@
 CREATE DATABASE ProjetoEstoquev;
 GO
-
+use ProjetoEstoquev;
 --DDL - DATA DEFINITION LANGUAGE
 CREATE TABLE Nivel(
 	codigo int PRIMARY KEY IDENTITY(1,1),

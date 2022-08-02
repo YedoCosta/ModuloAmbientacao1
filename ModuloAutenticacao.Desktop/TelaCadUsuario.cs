@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModuloAutenticacao.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,7 +60,7 @@ namespace ModuloAutenticacao.Desktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            new TelaNivel().Show();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -113,6 +114,11 @@ namespace ModuloAutenticacao.Desktop
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNivel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }
