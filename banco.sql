@@ -1,4 +1,4 @@
-CREATE DATABASE ProjetoEstoquev;
+CREATE DATABASE  ProjetoEstoquev;
 GO
 use ProjetoEstoquev;
 --DDL - DATA DEFINITION LANGUAGE
@@ -7,11 +7,10 @@ CREATE TABLE Nivel(
 	nome varchar(80) not null
 )
 
-SELECT * FROM sys.databases;
-
 --DML - DATA MANIPULATION LANGUAGE
-INSERT into Nivel(nome) VALUES ('administrador');
-INSERT into Nivel(nome) VALUES ('usuario');
+INSERT into Nivel(nome) VALUES ('Administrador');
+INSERT into Nivel(nome) VALUES ('Usuario');
 
 --DQL - DATA QUERY LANGUAGE
-SELECT * FROM Nivel;
+SELECT nome FROM Nivel order by codigo;
+

@@ -41,7 +41,7 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.txtNivel = new System.Windows.Forms.ComboBox();
+            this.cbNivel = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -177,16 +177,16 @@
             this.txtLogin.TabIndex = 20;
             this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
-            // txtNivel
+            // cbNivel
             // 
-            this.txtNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNivel.FormattingEnabled = true;
-            this.txtNivel.Location = new System.Drawing.Point(247, 314);
-            this.txtNivel.Name = "txtNivel";
-            this.txtNivel.Size = new System.Drawing.Size(137, 24);
-            this.txtNivel.TabIndex = 25;
-            this.txtNivel.Tag = "";
-            this.txtNivel.SelectedIndexChanged += new System.EventHandler(this.txtNivel_SelectedIndexChanged);
+            this.cbNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNivel.FormattingEnabled = true;
+            this.cbNivel.Location = new System.Drawing.Point(247, 314);
+            this.cbNivel.Name = "cbNivel";
+            this.cbNivel.Size = new System.Drawing.Size(137, 24);
+            this.cbNivel.TabIndex = 25;
+            this.cbNivel.Tag = "";
+            this.cbNivel.SelectedIndexChanged += new System.EventHandler(this.txtNivel_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -229,7 +229,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtNivel);
+            this.Controls.Add(this.cbNivel);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtId);
@@ -266,7 +266,7 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.ComboBox txtNivel;
+        private System.Windows.Forms.ComboBox cbNivel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;

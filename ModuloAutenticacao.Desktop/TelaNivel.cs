@@ -43,8 +43,7 @@ namespace ModuloAutenticacao.Desktop
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            NivelDAO nivel = new NivelDAO();
-            MessageBox.Show(nivel.Pesquisar(""));
+
         }
 
         private void TelaNivel_Load(object sender, EventArgs e)
@@ -56,6 +55,7 @@ namespace ModuloAutenticacao.Desktop
         {
 
         }
+
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
