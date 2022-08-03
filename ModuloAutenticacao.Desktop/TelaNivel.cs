@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ModuloAutenticacao.Classes;
 
@@ -27,6 +20,7 @@ namespace ModuloAutenticacao.Desktop
         {
             NivelDAO nivel = new NivelDAO();
             MessageBox.Show(nivel.Inserir(txtNome.Text));
+            CarregarResponsabilidades();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,8 +43,13 @@ namespace ModuloAutenticacao.Desktop
         private void TelaNivel_Load(object sender, EventArgs e)
         {
             txtID.Enabled = false;
+            CarregarResponsabilidades();
         }
-
+        private void CarregarResponsabilidades()
+        {
+            NivelDAO nivelPesquisa = new NivelDAO();
+            dgvNivel.DataSource = nivelPesquisa.Pesquisar();
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

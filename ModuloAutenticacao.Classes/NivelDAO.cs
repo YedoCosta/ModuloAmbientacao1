@@ -40,12 +40,27 @@ namespace ModuloAutenticacao.Classes
 
         public string Atualizar()
         {
-            
+
             return "atualizar";
         }
-        public string Pesquisar() { 
-        
-            return "pesquisar";
+
+
+        public DataTable Pesquisar()
+        {
+            Conexao.MinhaInstancia.Open();
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = "SELECT * FROM Nivel ORDER BY codigo;";
+           
+            //datatable (cria o bando de dados na memoria;
+            DataTable dataTable = new DataTable();
+            SqlDataReader reader = comando.ExecuteReader();
+            dataTable.Load(reader);
+            Conexao.MinhaInstancia.Close();
+
+
+
+            return dataTable;
         }
 
         public string Deletar()
@@ -54,21 +69,13 @@ namespace ModuloAutenticacao.Classes
         }
 
 
-            /*
-            SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = (@"Server = CLEISSIM; Database = ProjetoEstoquev; Uid = sa; Pwd = cleissim;");
-            cn.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = cn;
-            cmd.CommandText = "Select nome from Nivel";
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            cbNivel.DisplayMember = "nome";
-            cbNivel.DataSource = dt;
-            cn.Close();
-            */
-            
-        
     }
 }
+/*
+ 
+ 
+ testar depois
+    https://www.c-sharpcorner.com/UploadFile/1e050f/insert-update-and-delete-record-in-datagridview-C-Sharp/
+ 
+ 
+ */

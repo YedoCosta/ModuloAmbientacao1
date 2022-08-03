@@ -12,5 +12,7 @@ INSERT into Nivel(nome) VALUES ('Administrador');
 INSERT into Nivel(nome) VALUES ('Usuario');
 
 --DQL - DATA QUERY LANGUAGE
+
+SELECT * FROM Nivel;
 SELECT nome FROM Nivel order by codigo;
 

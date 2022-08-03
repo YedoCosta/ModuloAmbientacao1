@@ -54,7 +54,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(197, 23);
             this.txtNome.TabIndex = 3;
-            this.txtNome.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
             // 
@@ -65,7 +64,6 @@
             this.label1.Size = new System.Drawing.Size(21, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label5
             // 
@@ -96,7 +94,6 @@
             this.label3.Size = new System.Drawing.Size(83, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "SobreNome";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -144,7 +141,6 @@
             this.txtConfirmarSenha.PasswordChar = '*';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(197, 23);
             this.txtConfirmarSenha.TabIndex = 17;
-            this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.txtConfirmarSenha_TextChanged);
             this.txtConfirmarSenha.Leave += new System.EventHandler(this.txtConfirmarSenha_Leave);
             // 
             // txtId
@@ -155,7 +151,6 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(31, 23);
             this.txtId.TabIndex = 18;
-            this.txtId.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label9
             // 
@@ -166,7 +161,6 @@
             this.label9.Size = new System.Drawing.Size(43, 17);
             this.label9.TabIndex = 19;
             this.label9.Text = "Login";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtLogin
             // 
@@ -175,7 +169,6 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(197, 23);
             this.txtLogin.TabIndex = 20;
-            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // cbNivel
             // 
@@ -186,7 +179,7 @@
             this.cbNivel.Size = new System.Drawing.Size(137, 24);
             this.cbNivel.TabIndex = 25;
             this.cbNivel.Tag = "";
-            this.cbNivel.SelectedIndexChanged += new System.EventHandler(this.txtNivel_SelectedIndexChanged);
+            this.cbNivel.Enter += new System.EventHandler(this.cbNivel_Enter);
             // 
             // button1
             // 
