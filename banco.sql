@@ -16,3 +16,7 @@ INSERT into Nivel(nome) VALUES ('Usuario');
 SELECT * FROM Nivel;
 SELECT nome FROM Nivel order by codigo;
 
+UPDATE Nivel SET nome='Desenvolvedor' WHERE codigo=2 ;
+
+DELETE Nivel WHERE codigo=7;
+

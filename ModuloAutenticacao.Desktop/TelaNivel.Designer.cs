@@ -73,7 +73,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(315, 20);
             this.txtNome.TabIndex = 3;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // btnCadastrar
             // 
@@ -92,7 +91,7 @@
             this.dgvNivel.Name = "dgvNivel";
             this.dgvNivel.Size = new System.Drawing.Size(365, 210);
             this.dgvNivel.TabIndex = 5;
-            this.dgvNivel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvNivel.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNivel_RowHeaderMouseClick);
             // 
             // btnAlterar
             // 

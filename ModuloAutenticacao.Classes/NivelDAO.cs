@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ModuloAutenticacao.Classes
 {
@@ -33,13 +28,24 @@ namespace ModuloAutenticacao.Classes
 
             Conexao.MinhaInstancia.Close();
 
+
             return "Nivel Cadastrado";
 
         }
 
 
-        public string Atualizar()
-        {
+        public string Atualizar(string ID,string nome)
+        {   
+            
+            Conexao.MinhaInstancia.Open();
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = ("update Nivel set Nome=@Nome where codigo=@ID");
+            comando.Parameters.AddWithValue("@ID", ID);
+            comando.Parameters.AddWithValue("@Nome", nome);
+            comando.ExecuteNonQuery();
+
+            Conexao.MinhaInstancia.Close();
 
             return "atualizar";
         }
@@ -61,6 +67,7 @@ namespace ModuloAutenticacao.Classes
 
 
             return dataTable;
+
         }
 
         public string Deletar()
@@ -68,14 +75,11 @@ namespace ModuloAutenticacao.Classes
             return "deletar";
         }
 
+  
 
     }
 }
 /*
- 
- 
  testar depois
     https://www.c-sharpcorner.com/UploadFile/1e050f/insert-update-and-delete-record-in-datagridview-C-Sharp/
- 
- 
  */

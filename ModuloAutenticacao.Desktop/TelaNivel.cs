@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using ModuloAutenticacao.Classes;
 
@@ -6,6 +8,7 @@ namespace ModuloAutenticacao.Desktop
 {
     public partial class TelaNivel : Form
     {
+        int ID = 0;
         public TelaNivel()
         {
             InitializeComponent();
@@ -26,7 +29,8 @@ namespace ModuloAutenticacao.Desktop
         private void button2_Click(object sender, EventArgs e)
         {
             NivelDAO nivel = new NivelDAO();
-            MessageBox.Show(nivel.Atualizar());
+            MessageBox.Show(nivel.Atualizar(txtID.Text,txtNome.Text));
+            CarregarResponsabilidades();
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
@@ -44,21 +48,20 @@ namespace ModuloAutenticacao.Desktop
         {
             txtID.Enabled = false;
             CarregarResponsabilidades();
+            
         }
         private void CarregarResponsabilidades()
         {
             NivelDAO nivelPesquisa = new NivelDAO();
             dgvNivel.DataSource = nivelPesquisa.Pesquisar();
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+
+        private void dgvNivel_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
-        }
-
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-
+            ID = Convert.ToInt32(dgvNivel.Rows[e.RowIndex].Cells[0].Value.ToString());
+            txtNome.Text = dgvNivel.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }
