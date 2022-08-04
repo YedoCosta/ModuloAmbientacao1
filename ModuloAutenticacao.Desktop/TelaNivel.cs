@@ -8,7 +8,7 @@ namespace ModuloAutenticacao.Desktop
 {
     public partial class TelaNivel : Form
     {
-        int ID = 0;
+        
         public TelaNivel()
         {
             InitializeComponent();
@@ -23,34 +23,46 @@ namespace ModuloAutenticacao.Desktop
         {
             NivelDAO nivel = new NivelDAO();
             MessageBox.Show(nivel.Inserir(txtNome.Text));
-            CarregarResponsabilidades();
+            CarregarNivel();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             NivelDAO nivel = new NivelDAO();
             MessageBox.Show(nivel.Atualizar(txtID.Text,txtNome.Text));
-            CarregarResponsabilidades();
+            CarregarNivel();
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             NivelDAO nivel = new NivelDAO();
-            MessageBox.Show(nivel.Deletar());
+            MessageBox.Show(nivel.Deletar(txtID.Text));
+            CarregarNivel();
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            
+            NivelDAO nivelPesquisa = new NivelDAO();
+            dgvNivel.DataSource = nivelPesquisa.PesquisarPorNome(txtNome.Text);
+
+            if (txtNome.Text.Equals("")) {
+
+                CarregarNivel();
+                txtID.Clear();
+            }
+
+
 
         }
 
         private void TelaNivel_Load(object sender, EventArgs e)
         {
             txtID.Enabled = false;
-            CarregarResponsabilidades();
+            CarregarNivel();
             
         }
-        private void CarregarResponsabilidades()
+        private void CarregarNivel()
         {
             NivelDAO nivelPesquisa = new NivelDAO();
             dgvNivel.DataSource = nivelPesquisa.Pesquisar();
@@ -62,6 +74,12 @@ namespace ModuloAutenticacao.Desktop
         {
             txtID.Text = dgvNivel.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtNome.Text = dgvNivel.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void dgvNivel_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            
+            //dgvNivel.Refresh();
         }
     }
 }

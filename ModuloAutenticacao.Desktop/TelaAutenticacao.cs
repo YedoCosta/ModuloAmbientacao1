@@ -35,15 +35,16 @@ namespace ModuloAutenticacao.Desktop
                 MessageBox.Show("Login Obrigatorio");
                 textLogin.Focus();
             }
-            else if (user.Login.Equals("senai") && user.Senha.Equals(123))
+            else if (user.Login.Equals("senai") && user.Senha.Equals("123"))
             {
-                MessageBox.Show("Usuario ou senha invalido");
-                textSenha.Focus();
+                 TelaCadUsuario tcu = new TelaCadUsuario();
+                tcu.Show();
             }
             else
             {
-                TelaCadUsuario tcu = new TelaCadUsuario();
-                tcu.Show();
+               
+                MessageBox.Show("Usuario ou senha invalido");
+                textSenha.Focus();
 
             }
         }

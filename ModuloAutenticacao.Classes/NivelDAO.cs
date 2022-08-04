@@ -18,7 +18,7 @@ namespace ModuloAutenticacao.Classes
             comando.CommandType = System.Data.CommandType.Text;
 
             // Iniciando DML (Data Manipulation Language)
-            comando.CommandText = "INSERT INTO Nivel(nome)Values(@Nome)";
+            comando.CommandText = "INSERT INTO Nivel(nome)Values(@Nome);";
 
             // Adicionando parametros contra SQL Injection!            
             comando.Parameters.Add(new SqlParameter("@Nome", nome));
@@ -29,7 +29,7 @@ namespace ModuloAutenticacao.Classes
             Conexao.MinhaInstancia.Close();
 
 
-            return "Nivel Cadastrado";
+            return "Nivel Cadastrado com Sucesso!";
 
         }
 
@@ -40,14 +40,14 @@ namespace ModuloAutenticacao.Classes
             Conexao.MinhaInstancia.Open();
             SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
             comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = ("update Nivel set Nome=@Nome where codigo=@ID");
+            comando.CommandText = ("update Nivel set Nome=@Nome where codigo=@ID;");
             comando.Parameters.AddWithValue("@ID", ID);
             comando.Parameters.AddWithValue("@Nome", nome);
             comando.ExecuteNonQuery();
 
             Conexao.MinhaInstancia.Close();
 
-            return "atualizar";
+            return "Atualizado com Sucesso!";
         }
 
 
@@ -70,11 +70,34 @@ namespace ModuloAutenticacao.Classes
 
         }
 
-        public string Deletar()
+        public string Deletar(string ID)
         {
-            return "deletar";
+            Conexao.MinhaInstancia.Open();
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = ("DELETE Nivel WHERE codigo=@ID;");
+            comando.Parameters.AddWithValue("@ID", ID);
+            comando.ExecuteNonQuery();
+
+            Conexao.MinhaInstancia.Close();
+            return "Deletado com Sucesso!";
         }
 
+        public DataTable PesquisarPorNome(string nome)
+        {
+            Conexao.MinhaInstancia.Open();
+            SqlCommand comando = Conexao.MinhaInstancia.CreateCommand();
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = ("SELECT * from Nivel where Nome=@Nome;");
+            comando.Parameters.AddWithValue("@Nome", nome);
+            DataTable dataTable = new DataTable();
+            SqlDataReader reader = comando.ExecuteReader();
+            dataTable.Load(reader);
+            Conexao.MinhaInstancia.Close();
+
+            return dataTable;
+
+        }
   
 
     }
