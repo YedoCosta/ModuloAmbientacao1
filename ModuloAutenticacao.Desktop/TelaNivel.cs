@@ -60,7 +60,7 @@ namespace ModuloAutenticacao.Desktop
 
         private void dgvNivel_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ID = Convert.ToInt32(dgvNivel.Rows[e.RowIndex].Cells[0].Value.ToString());
+            txtID.Text = dgvNivel.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtNome.Text = dgvNivel.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
