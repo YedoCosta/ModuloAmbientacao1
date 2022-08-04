@@ -10,3 +10,9 @@ C:\Users\Aluno\Desktop\cleitson\ModuloAutenticacao\ModuloAutenticacao.Classes\ob
 C:\Users\Aluno\Desktop\cleitson\ModuloAutenticacao\ModuloAutenticacao.Classes\obj\Debug\ModuloAutenticacao.Classes.csproj.CoreCompileInputs.cache
 C:\Users\Aluno\Desktop\cleitson\ModuloAutenticacao\ModuloAutenticacao.Classes\obj\Debug\ModuloAutenticacao.Classes.dll
 C:\Users\Aluno\Desktop\cleitson\ModuloAutenticacao\ModuloAutenticacao.Classes\obj\Debug\ModuloAutenticacao.Classes.pdb
+C:\Users\Aluno\Documents\VS Comunity\ClaitonModuloAutenticacao\moduloAmbientacao\ModuloAutenticacao.Classes\bin\Debug\ModuloAutenticacao.Classes.dll
+C:\Users\Aluno\Documents\VS Comunity\ClaitonModuloAutenticacao\moduloAmbientacao\ModuloAutenticacao.Classes\bin\Debug\ModuloAutenticacao.Classes.pdb
+C:\Users\Aluno\Documents\VS Comunity\ClaitonModuloAutenticacao\moduloAmbientacao\ModuloAutenticacao.Classes\obj\Debug\ModuloAutenticacao.Classes.csproj.AssemblyReference.cache
+C:\Users\Aluno\Documents\VS Comunity\ClaitonModuloAutenticacao\moduloAmbientacao\ModuloAutenticacao.Classes\obj\Debug\ModuloAutenticacao.Classes.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Documents\VS Comunity\ClaitonModuloAutenticacao\moduloAmbientacao\ModuloAutenticacao.Classes\obj\Debug\ModuloAutenticacao.Classes.dll
+C:\Users\Aluno\Documents\VS Comunity\ClaitonModuloAutenticacao\moduloAmbientacao\ModuloAutenticacao.Classes\obj\Debug\ModuloAutenticacao.Classes.pdb

@@ -69,7 +69,7 @@ namespace ModuloAutenticacao.Desktop
         }
 
 
-
+        // ao clicar na seleção de pesquisa busca Id e Nome e MOSTRA
         private void dgvNivel_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             txtID.Text = dgvNivel.Rows[e.RowIndex].Cells[0].Value.ToString();

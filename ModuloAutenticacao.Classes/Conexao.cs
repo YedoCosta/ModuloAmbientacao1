@@ -16,7 +16,7 @@ namespace ModuloAutenticacao.Classes
                 {
                     //criar a conexão com MySQL   //nos parênteses -connection string
                     //abaixo conexao banco computador senai
-                    _conn = new SqlConnection(@"Server = Lab206_16\SQLEXPRESS; Database = ProjetoEstoquev; Uid = sa; Pwd = teste*123;");
+                    _conn = new SqlConnection(@"Server = Lab206_4; Database = ProjetoEstoquev; Uid = sa; Pwd = teste*123;");
 
                     //abaixo conexao banco notebook
                     //_conn = new SqlConnection(@"Server = CLEISSIM; Database = ProjetoEstoquev; Uid = sa; Pwd = cleissim;");
